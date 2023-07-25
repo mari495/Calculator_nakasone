@@ -80,10 +80,38 @@ public class ControllerClass {
     private Button button_puramai;
     @FXML
     private Button button_CE;
+    
+    // コントローラーの初期化処理
+    @FXML
+    private void initialize() {
+        // 初期化処理をここに記述
+    	 assert button_1 != null : "fx:id=\"button_1\" was not injected: check your FXML file 'dentaku_gamen.fxml'.";
+         assert button_2 != null : "fx:id=\"button_2\" was not injected: check your FXML file 'dentaku_gamen.fxml'.";
+         assert button_3 != null : "fx:id=\"button_3\" was not injected: check your FXML file 'dentaku_gamen.fxml'.";
+         assert button_4 != null : "fx:id=\"button_4\" was not injected: check your FXML file 'dentaku_gamen.fxml'.";
+         assert button_5 != null : "fx:id=\"button_5\" was not injected: check your FXML file 'dentaku_gamen.fxml'.";
+         assert button_6 != null : "fx:id=\"button_6\" was not injected: check your FXML file 'dentaku_gamen.fxml'.";
+         assert button_7 != null : "fx:id=\"button_7\" was not injected: check your FXML file 'dentaku_gamen.fxml'.";
+         assert button_8 != null : "fx:id=\"button_8\" was not injected: check your FXML file 'dentaku_gamen.fxml'.";
+         assert button_9 != null : "fx:id=\"button_9\" was not injected: check your FXML file 'dentaku_gamen.fxml'.";
+         assert button_CE != null : "fx:id=\"button_CE\" was not injected: check your FXML file 'dentaku_gamen.fxml'.";
+         assert button_clear != null : "fx:id=\"button_clear\" was not injected: check your FXML file 'dentaku_gamen.fxml'.";
+         assert button_delite != null : "fx:id=\"button_delite\" was not injected: check your FXML file 'dentaku_gamen.fxml'.";
+         assert button_hiku != null : "fx:id=\"button_hiku\" was not injected: check your FXML file 'dentaku_gamen.fxml'.";
+         assert button_kakeru != null : "fx:id=\"button_kakeru\" was not injected: check your FXML file 'dentaku_gamen.fxml'.";
+         assert button_puramai != null : "fx:id=\"button_puramai\" was not injected: check your FXML file 'dentaku_gamen.fxml'.";
+         assert button_ruto != null : "fx:id=\"button_ruto\" was not injected: check your FXML file 'dentaku_gamen.fxml'.";
+         assert button_tasu != null : "fx:id=\"button_tasu\" was not injected: check your FXML file 'dentaku_gamen.fxml'.";
+         assert button_wa != null : "fx:id=\"button_wa\" was not injected: check your FXML file 'dentaku_gamen.fxml'.";
+         assert button_waru != null : "fx:id=\"button_waru\" was not injected: check your FXML file 'dentaku_gamen.fxml'.";
+         assert button_zeikomi != null : "fx:id=\"button_zeikomi\" was not injected: check your FXML file 'dentaku_gamen.fxml'.";
+         assert button_zeinuki != null : "fx:id=\"button_zeinuki\" was not injected: check your FXML file 'dentaku_gamen.fxml'.";
+         assert displayField != null : "fx:id=\"displayField\" was not injected: check your FXML file 'dentaku_gamen.fxml'.";
+         assert symbolField != null : "fx:id=\"symbolField\" was not injected: check your FXML file 'dentaku_gamen.fxml'.";
 
-    // 数字のボタンが押されたときのイベントハンドラ
-    
-    
+    }
+
+    // 数字のボタンが押されたときのイベントハンドラメソッド名の最後の数字がボタンの数字を示す
     
     @FXML
     private void handleOneButtonAction0() {
@@ -95,6 +123,7 @@ public class ControllerClass {
             displayField.setText(String.valueOf(currentValue));
         }
     }
+    
         
      @FXML
       private void handleOneButtonAction00() {
@@ -123,13 +152,7 @@ public class ControllerClass {
       		}
       	
       }
-    	  
-    	  
-    	 
-    
-      
-      
-      
+    	
 
     @FXML
     private void handleOneButtonAction2() {
@@ -236,6 +259,8 @@ public class ControllerClass {
     		}
     }
     
+   //四則演算の計算
+    
    @FXML
     private void handleOneButtonActiontasu() {
 	   if(!(displayField.getText()).equals("")){
@@ -271,8 +296,8 @@ public class ControllerClass {
         operator = "-";
         isNewCalculation = false;
         
-        symbolField.setText("-"); // symbolフィールドに"+"を表示
-        //シンボルフィールドが＝だったら＋に上書きする
+        symbolField.setText("-"); // symbolフィールドに"-"を表示
+        //シンボルフィールドが＝だったら-に上書きする
         if (operator.equals("=")) 
         {
      	   operator = "-";
@@ -296,8 +321,8 @@ public class ControllerClass {
         operator = "×";
         isNewCalculation = false;
         
-        symbolField.setText("×"); // symbolフィールドに"+"を表示
-        //シンボルフィールドが＝だったら＋に上書きする
+        symbolField.setText("×"); // symbolフィールドに"×"を表示
+        //シンボルフィールドが＝だったら×に上書きする
         if (operator.equals("=")) 
         {
      	   operator = "×";
@@ -321,8 +346,8 @@ public class ControllerClass {
         operator = "÷";
         isNewCalculation = false;
         
-        symbolField.setText("÷"); // symbolフィールドに"+"を表示
-        //シンボルフィールドが＝だったら＋に上書きする
+        symbolField.setText("÷"); // symbolフィールドに"÷"を表示
+        //シンボルフィールドが＝だったら÷に上書きする
         if (operator.equals("=")) 
         {
      	   operator = "÷";
@@ -370,7 +395,7 @@ public class ControllerClass {
     	    symbolField.setText("="); // symbolフィールドに"+"を表示
     }
 
-    
+    //四則演算以外のボタンのオンアクション
     @FXML
     private void handleOneButtonActionpuramai() {
     	String currentValue = displayField.getText();
@@ -462,28 +487,11 @@ public class ControllerClass {
         operator = "";
        isNewCalculation = true;
        displayField.setText("0");
-       symbolField.setText(""); // symbolフィールドに
+       symbolField.setText(""); 
     }
     
-    // 他のボタンのイベントハンドラや追加のメソッドをここに追加
-    
    
-   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
-    // コントローラーの初期化処理
-    @FXML
-    private void initialize() {
-        // 初期化処理をここに記述
-    }
+
+   
 }

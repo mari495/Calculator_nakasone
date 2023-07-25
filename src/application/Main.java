@@ -13,7 +13,7 @@ public class Main extends Application {
         getClass().getResource("dentaku_gamen.fxml")
       );
       Scene scene = new Scene(root);
-      primaryStage.setTitle("dentakuapuri");
+      primaryStage.setTitle("Calculator_nakasone");
       primaryStage.setScene(scene);
       primaryStage.show();
     } catch (Exception e) {//例外処理として
